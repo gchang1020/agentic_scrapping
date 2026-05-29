@@ -26,10 +26,10 @@ structure
 
 usage:
  - python crewai_scraper.py # same as --help
+ - python crewai_scraper.py --once # run once
  - python crewai_scraper.py --site "FDIC" # filter by name
  - python crewai_scraper.py --loop 60 # run every 60 minutes
  - python crewai_scraper.py --site "FDIC" --loop 30
- - python crewai_scraper.py --loop 60 --once # run once then stop
  - python crewai_scraper.py --site "FDIC" --loop 30 --once
 """
 
@@ -433,16 +433,16 @@ if __name__ == "__main__":
         epilog = (
             "examples:\n"
             "  python crewai_scraper.py (same as --help)\n"
+            "  python crewai_scraper.py --once\n"
             "  python crewai_scraper.py --site 'FDIC'\n"
-            "  python crewai_scraper.py --loop 60\n"
             "  python crewai_scraper.py --site 'FDIC' --loop 30\n"
-            "  python crewai_scraper.py --loop 60 --once\n"
-            "  python crewai_scraper.py --site 'FDIC' --loop 30 --once"
+            "  python crewai_scraper.py --site 'FDIC' --loop 30 --once\n"
+            "  python crewai_scraper.py --loop 60"
         ),
         formatter_class = argparse.RawDescriptionHelpFormatter,
     )
 
-    # add arguments
+    # add arguments: python crewai_scraper.py --help
     parser.add_argument("--site", help=f"Filter by site name based on '{sites_yaml}'")
     parser.add_argument("--loop", type=int, metavar="MINUTES", help="Run every N minutes (omit for single run)")
     parser.add_argument("--once", action="store_true", help="With --loop: run once then stop instead of looping")
