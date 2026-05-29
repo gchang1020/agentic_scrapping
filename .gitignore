@@ -1,0 +1,18 @@
+# Python bytecode — generated automatically
+__pycache__/
+*.pyc
+*.pyo
+
+# output folders — scraped data and alerts are runtime output
+out-reports/
+out-alerts/
+
+# environment/secrets — just in case
+
+# editor folders — VS Code, PyCharm etc create these
+.vscode/
+.idea/
+
+# OS files — Windows and Mac create these automatically
+Thumbs.db
+.DS_Store
