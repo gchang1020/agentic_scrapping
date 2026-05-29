@@ -14,5 +14,8 @@ project files and sub-folders:
 - sites-advanced.yaml
 - sites-simple.yaml
 
-
-
+configurations:
+- API Keys: taken by defining environment variables
+- LLM models: added to garys_llm.py 
+- websites: added to sites-simple or sites-advanced.yaml
+- scraping adapters: added under the folder of 'adapters/'

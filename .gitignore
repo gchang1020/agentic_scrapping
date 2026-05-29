@@ -1,5 +1,6 @@
 # Python bytecode — generated automatically
 __pycache__/
+backup_project.bat
 *.pyc
 *.pyo
 
