@@ -1,0 +1,30 @@
+# sites-advanced.yaml
+#
+# - configure scrape targets here — no Python editing needed
+# - type options:
+#     html_table: page contains <table> elements
+#     csv: direct URL to a .csv file
+#     html_text: generic page, extract readable text
+#
+# - adapter: name of the module in adapters/ folder that handles fetching
+#     html_table_standard: standard HTML table pages (most sites)
+#     csv_direct: direct CSV file URLs
+#     (add more by creating adapters/your_name.py)
+#
+# - to add a site: copy any block below, change the fields, save
+
+sites:
+  - name: "Rental Car Taxes"
+    url: "https://taxfoundation.org/blog/rental-car-taxes-fees/"
+    type: html_table
+    adapter: "html_table_standard"
+    description: "State-by-state rental car tax and fee rates"
+    enabled: true
+
+  - name: "FDIC Institution Definitions"
+    url: "https://api.fdic.gov/banks/docs//institutions_definitions.csv"
+    type: csv
+    adapter: "csv_direct"
+    description: "Field definitions for FDIC bank institution records"
+    enabled: true
+

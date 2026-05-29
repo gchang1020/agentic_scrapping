@@ -1,0 +1,23 @@
+# sites-simple.yaml
+# 
+# - configure scrape targets here — no Python editing needed
+# - type options:
+#   html_table: page contains <table> elements
+#   csv: direct URL to a .csv file
+#   html_text: generic page, extract readable text
+#
+# - to add a site: copy any block below, change the fields, save. That's it
+
+sites:
+  - name: "Rental Car Taxes"
+    url: "https://taxfoundation.org/blog/rental-car-taxes-fees/"
+    type: html_table
+    description: "State-by-state rental car tax and fee rates"
+    enabled: true
+
+  - name: "FDIC Institution Definitions"
+    url: "https://api.fdic.gov/banks/docs//institutions_definitions.csv"
+    type: csv
+    description: "Field definitions for FDIC bank institution records"
+    enabled: true
+
